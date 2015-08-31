@@ -1,0 +1,23 @@
+%section.admin_payments
+  .container
+    .row
+      .col-sm-10.col-sm-offset-1
+        %section.payment_history
+          %header
+            %h1 Categories
+          %table.table
+            %thead
+              %tr
+                %th Category ID
+                %th Category
+                %th Position
+
+
+            %tbody
+              - @categories.each do |category|
+                %tr
+                  %td= category.id
+                  %td= category.name
+                  %td= category.position
+
+

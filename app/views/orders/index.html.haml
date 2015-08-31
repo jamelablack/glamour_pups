@@ -1,0 +1,25 @@
+%section.admin_payments
+  .container
+    .row
+      .col-sm-10.col-sm-offset-1
+        %section.payment_history
+          %header
+            %h1 Orders
+          %table.table
+            %thead
+              %tr
+                %th Order ID
+                %th Type
+                %th Customer Last Name
+                %th Customer Email
+                %th Shipping State
+                %th Shipping Status
+            %tbody
+              - @orders.each do |order|
+                %tr
+                  %td= order.id
+                  %td= order.type
+                  %td= order.customer_last_name
+                  %td= order.customer_email
+                  %td= order.shipping_state
+                  %td= order.shipping_status
