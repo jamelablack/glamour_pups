@@ -1,17 +1,14 @@
-class OrderService < BaseService
+class OrderService
+  extend BaseService
+
   class << self
     def all
-      super('orders', 'order', Order)
-    end
+      data = send('accounts/2270023/orders')
 
-    private
-    def subdomain
-      Rails.application.secrets.big_cartel_subdomain
+      data['data'].map do |data|
+        attributes = { id: data['id'], type: data['type'] }.merge data['attributes']
+        Order.new attributes
+      end
     end
-
-    def password
-      Rails.application.secrets.big_cartel_password
-    end
-
   end
 end
