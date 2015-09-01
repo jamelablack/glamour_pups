@@ -35,7 +35,7 @@ describe "renders account upon API request" do
     response = RestClient.get ('https://api.bigcartel.com'
       content_type = 'application/vnd.api+json; charset=utf-8:',
       accept = 'application/vnd.api+json:'
-      authorization = 'Basic Z2xhbW91cnB1cHM6QmxpbmsxODQ='
+      authorization = 'Basic Z2xhbW91cnB1cHM6QmxpbmsxODQ=')
     expect(response.id).to eq('2270023')
     expect(response.status). to eq(200)
   end
