@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "renders account upon API request" do
   before(:each) do
-    stub_request(:get, 'https://api.bigcartel.com')
+    stub_request(:any, 'https://api.bigcartel.com')
       .with(
         header: {
           'Content-Type' => 'application/vnd.api+json; charset=utf-8:',
