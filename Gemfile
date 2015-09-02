@@ -12,9 +12,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
+gem 'pg'
 
 
-gem 'rest_client'
+gem 'rest-client'
 gem 'virtus'
 gem 'pry'
 gem 'pry-nav'
@@ -22,7 +23,6 @@ gem 'pry-nav'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'sqlite3', '1.3.10'
 end
 
 group :test do
