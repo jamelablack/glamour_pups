@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 
 gem 'rails', '4.1.4'
@@ -13,6 +14,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
 gem 'pg'
+gem 'rails_12factor'
 
 
 gem 'rest-client'
