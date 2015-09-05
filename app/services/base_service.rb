@@ -1,13 +1,15 @@
 class BaseService
+  attr_accessor :endpoint
 
   private
 
   def parsed_response(endpoint)
-    response = RestClient.get(url(endpoint), headers)
+    self.endpoint = endpoint
+    response = RestClient.get(url, headers)
     JSON.parse(response)
   end
 
-  def url(endpoint)
+  def url
     "https://#{subdomain}:#{password}@api.bigcartel.com/v1/#{endpoint}"
   end
 
