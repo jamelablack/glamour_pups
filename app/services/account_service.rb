@@ -2,7 +2,13 @@ class AccountService < BaseService
 
   def self.show
     data = parsed_response('accounts')
-    attributes = data['data'][0]['attributes'].merge(id: data['data'][0]['id'])
-    Account.new attributes
+    Account.new attributes_from_data(data)
   end
+
+  private
+
+  def self.attributes_from_data(data)
+    data['data'][0]['attributes'].merge(id: data['data'][0]['id'])
+  end
+
 end
