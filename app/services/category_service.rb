@@ -1,5 +1,4 @@
-class CategoryService
-  extend BaseService
+class CategoryService < BaseService
 
   def self.all
     data = parsed_response('accounts/2270023/categories')

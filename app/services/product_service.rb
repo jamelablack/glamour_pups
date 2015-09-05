@@ -1,5 +1,4 @@
-class ProductService
-  extend BaseService
+class ProductService < BaseService
 
   def self.all
     data = parsed_response('accounts/2270023/products')
