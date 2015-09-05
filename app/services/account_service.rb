@@ -3,7 +3,7 @@ class AccountService
 
   class << self
     def show
-      data = send('accounts')
+      data = parsed_response('accounts')
       attributes = data['data'][0]['attributes'].merge(id: data['data'][0]['id'])
       Account.new attributes
     end
