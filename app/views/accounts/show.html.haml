@@ -3,7 +3,7 @@
     .row
       .col-sm-10.col-sm-offset-1
         %section.payment_history
-          %header
+          %header.page_header
             %h1 Account
   %section.user_reviews.container
     .row
@@ -14,25 +14,25 @@
               .col-sm-2
                 %label Account ID
               .col-sm-8
-                %p= @account.id
+                %p.account_id= @account.id
             %li.row
               .col-sm-2
                 %label Store URL
               .col-sm-8
-                %p= @account.url
+                %p.url= @account.url
             %li.row
               .col-sm-2
                 %label Store Name
               .col-sm-8
-                %p= @account.store_name
+                %p.store_name= @account.store_name
             %li.row
               .col-sm-2
                 %label Description
               .col-sm-8
-                %p= @account.description
+                %p.store_description= @account.description
             %li.row
               .col-sm-2
                 %label Contact Email
               .col-sm-8
-                %p= @account.contact_email
+                %p.contact_email= @account.contact_email
 

@@ -8,7 +8,8 @@ class AccountService < BaseService
   private
 
   def attributes_from_data(data)
-    data['data'][0]['attributes'].merge(id: data['data'][0]['id'])
+    data['data'][0]['attributes']
+      .symbolize_keys.merge(id: data['data'][0]['id'])
   end
 
 end
