@@ -85,7 +85,7 @@ before(:each) do
 
   describe ".all" do
     it "should return a store's categories" do
-      categories = described_class.all
+      categories = described_class.new.all
 
       expect(categories.first.id).to eq '11593798'
       expect(categories.first.name).to eq "Happy"

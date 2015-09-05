@@ -353,7 +353,7 @@ before(:each) do
 
   describe ".all" do
     it "should return a store's orders" do
-      orders = described_class.all
+      orders = described_class.new.all
 
       expect(orders.first.id).to eq 'NGRP-090092'
       expect(orders.first.customer_last_name).to eq "Ketchum"

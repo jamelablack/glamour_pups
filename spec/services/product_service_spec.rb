@@ -523,7 +523,7 @@ before(:each) do
 
   describe ".all" do
     it "should return a store's products" do
-      products = described_class.all
+      products = described_class.new.all
 
       expect(products.first.id).to eq "28777534"
       expect(products.first.name).to eq "Lola"

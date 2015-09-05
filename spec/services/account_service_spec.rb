@@ -53,7 +53,7 @@ before(:each) do
 
   describe ".show" do
     it "should return a store's account information" do
-      account = described_class.show
+      account = described_class.new.show
 
       expect(account.id).to eq '2270023'
       expect(account.url).to eq "http://glamourpups.bigcartel.com"

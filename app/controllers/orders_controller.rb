@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
   def index
-    @orders = OrderService.all
+    @orders = OrderService.new.all
   end
 end
