@@ -14,24 +14,25 @@ describe AccountService do
     { :accept => 'application/vnd.api+json' }
   end
 
-  before do
-    expect(RestClient).to receive(:get).with(url, headers) do
-      {
-        data: [
-          {
-            id: '42',
-            attributes: {
-              foo: 'bar',
-              baz: 'quux'
-            }
+  let(:http_response) do
+    {
+      data: [
+        {
+          id: '42',
+          attributes: {
+            foo: 'bar',
+            baz: 'quux'
           }
-        ]
-      }.to_json
-    end
+        }
+      ]
+    }.to_json
   end
 
   describe "#show" do
-    it "should return a store's account information" do
+    it "should return a store's account" do
+      expect(RestClient).to receive(:get)
+        .with(url, headers) { http_response }
+
       expect(Account).to receive(:new)
         .with({ id: '42', foo: 'bar', baz: 'quux'}) { account }
 
