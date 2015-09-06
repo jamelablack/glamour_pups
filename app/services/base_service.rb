@@ -32,6 +32,7 @@ class BaseService
   end
 
   def attributes_from_data(data)
-    { id: data['id'], type: data['type'] }.merge data['attributes']
+   attributes = { id: data['id'], type: data['type'] }.merge data['attributes']
+   attributes.symbolize_keys
   end
 end
