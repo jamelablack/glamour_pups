@@ -3,7 +3,7 @@
     .row
       .col-sm-10.col-sm-offset-1
         %section.payment_history
-          %header
+          %header.page_header
             %h1 Products
           %table.table
             %thead
@@ -16,8 +16,8 @@
             %tbody
               - @products.each do |product|
                 %tr
-                  %td= product.id
-                  %td= product.name
-                  %td= product.status
-                  %td= product.description
-                  %td= product.default_price
+                  %td.product_id= product.id
+                  %td.name= product.name
+                  %td.status= product.status
+                  %td.description= product.description
+                  %td.default_price= product.default_price

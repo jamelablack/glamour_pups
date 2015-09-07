@@ -3,7 +3,7 @@
     .row
       .col-sm-10.col-sm-offset-1
         %section.payment_history
-          %header
+          %header.page_header
             %h1 Orders
           %table.table
             %thead
@@ -17,9 +17,9 @@
             %tbody
               - @orders.each do |order|
                 %tr
-                  %td= order.id
-                  %td= order.type
-                  %td= order.customer_last_name
-                  %td= order.customer_email
-                  %td= order.shipping_state
-                  %td= order.shipping_status
+                  %td.order_id= order.id
+                  %td.type= order.type
+                  %td.customer_last_name= order.customer_last_name
+                  %td.customer_email= order.customer_email
+                  %td.shipping_state= order.shipping_state
+                  %td.shipping_status= order.shipping_status
