@@ -14,12 +14,12 @@ GlamourPups is a Rails App built to consume a BigCartel Store API.
   brew install postgresql
 
 ---
-## Project Setup
+=== Project Setup
   git clone https://github.com/jamelablack/glamour_pups && cd glamour_pups
   bundle
 
 ---
-## Database Setup
+=== Database Setup
 * Create your config/database.yml file
 ---
 development:
@@ -52,16 +52,16 @@ Once created, run the following:
 
 
 ---
-## Ruby version
+=== Ruby version
  ruby 2.0.0
 
 ---
-## Rails version
+=== Rails version
  Rails 4.1.4
 
-## Heroku
+=== Heroku
 * GlamourPups is deployed to Heroku: http://glamourpups.herokuapp.com
 
-## Test Suite
-Rspec
+=== Test Suite
+  Rspec
 
