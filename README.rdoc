@@ -2,23 +2,23 @@
 
 GlamourPups is a Rails App built to consume a BigCartel Store API.
 
-BigCartel Store: (http://glamourpups.bigcartel.com)
-Heroku App: (https://glamourpups.herokuapp.com)
+* BigCartel Store: (http://glamourpups.bigcartel.com)
+* Heroku App: (https://glamourpups.herokuapp.com)
 
-
+---
 ## Dependencies
 * Postgres
-
-Installation with Homebrew is recommended:
 ---
-brew update
-brew install postgresql
-```
+### Installation with Homebrew is recommended:
+  brew update
+  brew install postgresql
 
+---
 ## Project Setup
-git clone https://github.com/jamelablack/glamour_pups && cd glamour_pups
-bundle
+  git clone https://github.com/jamelablack/glamour_pups && cd glamour_pups
+  bundle
 
+---
 ## Database Setup
 * Create your config/database.yml file
 ---
@@ -47,14 +47,15 @@ production:
   password:
 ---
 Once created, run the following:
+  rake db:setup
+  rake db:migrate
+
+
 ---
-rake db:setup
-rake db:migrate
-
-
 ## Ruby version
  ruby 2.0.0
 
+---
 ## Rails version
  Rails 4.1.4
 
