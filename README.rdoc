@@ -1,28 +1,66 @@
-== README
+== Welcome to GlamourPups
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GlamourPups is a Rails App built to consume a BigCartel Store API.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+BigCartel Store: (http://glamourpups.bigcartel.com)
+Heroku App: (https://glamourpups.herokuapp.com)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Dependencies
+* Postgres
+
+Installation with Homebrew is recommended:
+---
+brew update
+brew install postgresql
+```
+
+## Project Setup
+git clone https://github.com/jamelablack/glamour_pups && cd glamour_pups
+bundle
+
+## Database Setup
+* Create your config/database.yml file
+---
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: glamourpups_dev
+  pool: 5
+  username: your_username
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: glamourpups_test
+  pool: 5
+  username: your_username
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: glamourpups_prod
+  pool: 5
+  username: your_username
+  password:
+---
+Once created, run the following:
+---
+rake db:setup
+rake db:migrate
+
+
+## Ruby version
+ ruby 2.0.0
+
+## Rails version
+ Rails 4.1.4
+
+## Heroku
+* GlamourPups is deployed to Heroku: http://glamourpups.herokuapp.com
+
+## Test Suite
+Rspec
+
