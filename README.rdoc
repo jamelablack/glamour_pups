@@ -6,7 +6,7 @@ GlamourPups is a Rails App built to consume a BigCartel Store API.
 * Heroku App: (https://glamourpups.herokuapp.com)
 
 ---
-## Dependencies
+== Dependencies
 * Postgres
 ---
 ### Installation with Homebrew is recommended:
