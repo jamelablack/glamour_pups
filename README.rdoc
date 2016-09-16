@@ -1,4 +1,4 @@
-== Welcome to GlamourPups
+= Welcome to GlamourPups
 
 GlamourPups is a Rails App built to consume a BigCartel Store API.
 
@@ -9,7 +9,7 @@ GlamourPups is a Rails App built to consume a BigCartel Store API.
 == Dependencies
 * Postgres
 ---
-### Installation with Homebrew is recommended:
+=== Installation with Homebrew is recommended:
   brew update
   brew install postgresql
 
