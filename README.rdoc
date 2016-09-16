@@ -59,9 +59,6 @@ Once created, run the following:
 === Rails version
  Rails 4.1.4
 
-=== Heroku
-* GlamourPups is deployed to Heroku: http://glamourpups.herokuapp.com
-
 === Test Suite
   Rspec
 
